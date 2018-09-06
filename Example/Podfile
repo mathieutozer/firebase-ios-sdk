@@ -119,6 +119,22 @@ target 'Core_Example_macOS' do
   end
 end
 
+target 'Firestore_Example_macOS' do
+  platform :osx, '10.10'
+  pod 'FirebaseStorage', :path => '../'
+  pod 'FirebaseAuth', :path => '../'
+  pod 'FirebaseDatabase', :path => '../'
+  pod 'FirebaseFirestore', :path => '../'
+
+end
+#
+#target 'Firestore_Example_macOS_objc' do
+#  platform :osx, '10.10'
+#  
+#  pod 'FirebaseFirestore', :path => '../'
+#
+#end
+
 target 'Auth_Example_macOS' do
   platform :osx, '10.10'
 

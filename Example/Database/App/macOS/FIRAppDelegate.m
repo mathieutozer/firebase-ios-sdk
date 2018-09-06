@@ -15,6 +15,8 @@
  */
 
 #import "FIRAppDelegate.h"
+@import FirebaseCore;
+@import FirebaseFirestore;
 
 @interface FIRAppDelegate ()
 
@@ -24,6 +26,9 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
+  [FIRApp configure];
+  FIRCollectionReference *cals = [[FIRFirestore firestore] collectionWithPath:@"calendars"];
+  NSLog(@"cals %@", cals);
 }
 
 
